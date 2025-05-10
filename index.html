@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="visit-Alert flex" id="visit-Alert">
+    <div class="alert-elements flex">
+      <h5 id="visit-Alert_text">Привіт!
+        <br>
+        Ви потрапили на сайт інтерактивних ігор та завдань
+        Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+        Бажаємо Вам гарно провести час!
+      </h5>
+      <div class="inp-userName">
+        <p class="enter-name">Введіть своє ім’я:</p>
+        <input type="text" id="ueserName" placeholder="Ваше ім’я...">
+        <div class="seve-userName">
+          <p>Зберегти</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <nav class="header-nav">
+      <div class="flex_header">
+      <img src="./images/Group 4.svg" alt="logo" class="header_Logotyp">
+      <div id="adaptiv_menu">
+        <img src="./images/Burger.svg" alt="logo" id="burger">
+      </div>
+      </div>
+      <div id="links">
+      <ul class="header-list">
+        <li id="open_Menu"><a href="#">Інтерактив</a><img src="./images/Vector 4.svg" alt="logo" class="arrowDown">
+          <ul class="menu">
+            <li><a href="#sec1">Числовий</a></li>
+            <li><a href="#sec6">Ігровий</a></li>
+            <li><a href="#visit-Alert" id="link_visitMenu">Ознайомчий</a></li>
+          </ul>
+        </li>
+        <li><a href="#our_Team">Наша команда</a></li>
+        <li><a href="#footer">Контакти</a></li>
+      </ul>
+    </div>
+      <div class="header-bgr">
+        <div class="header-bgr-btn" id="header-bgr-btn">
+          <div class="sun-moon" id="sun-moon"><img src="./images/Ellipse 8.svg" alt="logo"></div>
+        </div>
+        <p id="User">Вітаємо, User!</p>
+      </div>
+    </nav>
+
+  </header>
+  <main>
+    <div class="container">
+      <section class="section1" id="sec1">
+        <h2 class="sec1_title">Популярні інетрактивні ігри</h2>
+        <div class="your_birthday_year flex">
+          <div class="line"></div>
+          <h4>Перевір в який рік ти народився</h4>
+          <div class="input_year-fn flex" >
+            <div class="input_year flex">
+              <input id="inp_firstSection" placeholder="Введіть рік народження">
+              <div class="mirror"><img src="./images/Mirror.svg" alt="logo"></div>
+            </div>
+            <p class="year_information">x x x </p>
+          </div>
+          </div>
+      </section>
+      <section class="section2">
+        <div class="sec_2 flex">
+          <div class="line"></div>
+          <h4>Вгадай число, яке загадав комп’ютер</h4>
+          <div class="guessgame"><div>
+            <input class="guess" placeholder="Введіть число" type="text">
+            <div class="search"><img src="./images/Frame 105.svg" alt="logo" style="cursor: pointer;"></div>
+            </div>
+            <p id="guess_answear"></p>
+          </div>
+        </div>
+      </section>
+      <section class="section3" id="sec_3">
+        <div class="sec_3 flex">
+          <div class="line"></div>
+          <h4>Камінь - ножиці - папір</h4>
+          <div class="sec3-fl">
+          <div class="yourpicks">
+            <img id="rck" src="./images/Frame 127.svg" alt="1">
+            <img id="scr" src="./images/Frame 126.svg" alt="1">
+            <img id="ppr" src="./images/Frame 128.svg" alt="1">
+          </div>
+          <div class="sec3_score">
+            <ul class="Score">
+              <li>
+                Рахунок:
+              </li>
+              <li id="PCWIN">
+                Комп’ютер - 0
+              </li>
+              <li id="YOUWIN">
+                Ви - 0
+              </li>
+            </ul>
+          </div>
+          </div>
+          <p class="PRSgm" id="PRSgm"></p>
+          <button class="ButtonPRS">Варіант комп’ютера</button>
+        </div>
+      </section>
+      <section class="sec4">
+            <div class="sec4-wrap flex">
+                <div class="line"></div>
+                <h4 class="h2-sec4">Калькулятор</h4>
+                <div class="kalk-sec4 flex">
+                    <div class="btn1-sec4"><input id="num1" placeholder="Введіть число"> </div>
+                    <div class="knopochki-sec4">
+                        <div class="razd-sec4">
+                            <img src="./images/Frame plus.svg" alt="+" onclick="setOperation('+')">
+                            <img src="./images/Frame minus.svg" alt="-" onclick="setOperation('-')">
+                        </div>
+                        <div class="razd-sec4">
+                            <img src="./images/Frame multiply.svg" alt="*" onclick="setOperation('*')">
+                            <img src="./images/Frame divide.svg" alt="/" onclick="setOperation('/')">
+                        </div>
+                    </div>
+                    <div class="btn2-sec4"><input type="text" id="num2" placeholder="Введіть число"> </div>
+                    <div class="doriv"> <img src="./images/Frame equals.svg" alt="=" onclick="calculate()"></div>
+                    <div class="btn3-sec4"><input type="text" id="result" placeholder="Результат"> </div>
+                </div>
+            </div>
+    </section>
+    <section class="sec5 flex">
+      <div class="line"></div>
+              <h2 class="h2-sec5">Калькулятор часу</h2>
+            <div class="sec5-wrap flex">
+                <div class="kalk-sec5">
+                    <div class="btn1-sec5"><input type="text" placeholder="Введіть число">
+                        <img src="./images/Frame 105.png" alt="lupa">
+                    </div>
+                </div>
+                <input type="text" placeholder="Результат" class="inp-sec5">
+                <div class="br1-sec5"></div>
+            </div>
+    </section>
+      <section class="section6" id="sec6">
+        <div class="sec_6 flex">
+          <div class="line"></div>
+          <p class="google-dino">Google динозавр</p>
+          <div id="game" class="flex">
+            <div id="dino"><img src="./images/Знімок_екрана_2025-04-16_001741-removebg-preview.png" alt="logo"></div>
+            <div id="cactus"><img src="./images/cactus-removebg-preview.png" alt="logo"></div>
+            <div class="game_over">
+              <p>game over</p>
+              <img src="./images/game_over.png" alt="logo" class="game_over_Btn">
+            </div>
+            <p id="dino_points">0</p>
+          </div>
+        </div>
+      </section>
+      <section class="section7">
+        <div class="sec_7 flex">
+          <div class="line"></div>
+          <p class="football_paragraph">Футбол</p>
+          <div class="container7">
+            <div id="footballbase" class="soccer_stadion"></div>
+            <img id="ballfollow" class="ball" src="./images/football (1) 1.svg" alt="1">
+          </div>
+        </div>
+      </section>
+      <section class="sec8 flex">
+            <div class="sec8-warp ">
+                <h2 class="h2-sec8">Введіть 3 числа</h2>
+                <div class="knopochki-sec8 flex">
+                    <div class="btn1-sec8"><input type="text" id="input1" placeholder="Введіть число"></div>
+                    <div class="btn2-sec8"><input type="text" id="input2" placeholder="Введіть число"></div>
+                    <div class="btn3-sec8"><input type="text" id="input3" placeholder="Введіть число"></div>
+                </div>
+                <p class="p-sec8" id="max-result">Найбільше число, яке ви ввели</p>
+            </div>
+    </section>
+      <section class="section9" id="our_Team">
+        <div class="sec_9 flex">
+          <div class="line"></div>
+          <h4 class="our_team">Наша команда</h4>
+          <div class="foto_members">
+            <div class="left">
+              <span id="sp_left">&#8249</span>
+            </div>
+            <div class="foto"><img src="./images/My_foto_of_team.jpg" alt="logo" width="150px" height="150px"
+                id="img_member"></div>
+            <div class="right">
+              <span id="sp_right">&#8250</span>
+            </div>
+          </div>
+          <p class="memeber_name">Taras</p>
+          <p class="information">Тім'лід команди, відповідає за виконання завдань. Працював над виконанням:
+            <b>Меню</b>, <b>року народження</b>, <b>Google динозаврика</b>, <b>інформацією про нашу команду</b> та <b>адаптивами</b></p>
+          <ul class="members">
+            <li id="Taras"></li>
+            <li id="Potap"></li>
+            <li id="Andriy"></li>
+          </ul>
+        </div>
+      </section>
+      <section class="section_10">
+        <div class="sec_10">
+          <div class="container_10">
+            <h4>
+              Обери вченого/их
+            </h4>
+           <div class="scientist_grid">
+            <div id="Albert" class="scientist">
+              <p>
+                Albert Einshtein
+                1879-1955
+              </p>
+            </div>
+            <div id="Galileo" class="scientist">
+              <p>
+                Galileo Galilei
+                1564-1642
+              </p>
+            </div>
+            <div id="Isaac" class="scientist">
+              <p>
+                Isaac Newton
+                1643-1727
+              </p>
+            </div>
+            <div id="Thomas" class="scientist">
+              <p>
+                Thomas Edison
+                1847-1931
+              </p>
+            </div>
+            <div id="Marie" class="scientist">
+              <p>
+                Marie Curie
+                1867-1934
+              </p>
+            </div>
+            <div id="Nikola" class="scientist">
+              <p>
+                Nikola Tesla
+                1856-1943
+              </p>
+            </div>
+            <div id="Michael" class="scientist">
+              <p>
+                Michael Faraday
+                1791-1867
+              </p>
+            </div>
+            <div id="Louis" class="scientist">
+              <p>
+                Louis Pasteur
+                1822-1895
+              </p>
+            </div>
+            <div id="Charles" class="scientist">
+              <p>
+                Charles Darwin
+                1809-1882
+              </p>
+            </div>
+            <div id="Niels" class="scientist">
+              <p>
+                Niels Bohr
+                1885-1962
+              </p>
+            </div>
+            <div id="Dmitri" class="scientist">
+              <p>
+                Dmitri Mendeleev
+                1834-1907
+              </p>
+            </div>
+            <div id="Ada" class="scientist">
+              <p>
+                Ada Lovelace
+                1815-1852
+              </p>
+            </div>
+           </div>
+           <div class="btngrid">
+            <div class="grid1">
+           <button id="S">Які вчені народилися в 19 ст.</button>
+           <button id="Aplhabet">Відсортувати вчених за алфавітом</button>
+           <button id="Age">Відсортувати вчених за кількістю прожитих років</button>
+           <button id="Youngest">Знайти вченого, який народився найпізніше</button>
+          </div>
+          <div class="ggtop">
+           <button id="GG">Знайти вчених, в яких співпадають перші літери імені і прізвища</button>
+          </div>
+           <div class="grid2">
+           <button id="AlbertAge">Знайти рік народження Albert Einshtein</button>
+           <button id="Csurname">Знайти вчених, прізвища яких починаються на на літеру “С” </button>
+           <button id="Aname">Видалити всіх вчених, ім’я яких починається на “А”</button>
+           <button id="YO">Знайти вченого, який прожив найдовше і вченого, 
+            який прожив найменше</button>
+          </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer" id="footer">
+    <div class="foot_wrap">
+    <div class="logo-contacts">
+    <div class="logo-section">
+      <img src="./images/Group 128 1.svg" alt="img" class="foot_logo">
+    </div>
+  
+    <div class="contacts">
+      <pre class="pre">
+           Тел: +38 (123) 456 78 90
+           E-Mail: codingmagic@gmail.com
+           Facebook: CodingMagic
+           Twitter: CodingMagic
+           Instagram: CodingMagic
+          </pre>
+    </div>
+   </div>
+
+    <div class="subscribe">
+      <div class="sub_foot flex">
+        <div class="email-wrapper">
+          <input type="email" placeholder="Ваша ел. адреса...">
+            <div class=""><p class="p_sub">* Підписуючись, ви згодні отримувати інформаційні новини на e-mail</p></div>
+          </div>
+          <div class="button-fut" onclick="openOverlay()"><p>Підписатись</p></div>
+        </div>
+      <form class="subscribe-form">
+        <div id="overlay">
+            <div class="modal">
+                <div class="close-btn" onclick="closeOverlay()">×</div>
+                <p>Дякую за підписку!</p>
+                <div class="icons">
+                    <img src="/images/sword 1.png" alt="sword" />
+                    <img src="/images/puzzle 1.png" alt="puzzle" />
+                    <img src="/images/game-development 1.png" alt="game" />
+                    <img src="/images/tic-tac-toe 1.png" alt="grid" />
+                </div>
+            </div>
+        </div>
+      </form>
+      </div>
+    
+    </div>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+
+</html>
